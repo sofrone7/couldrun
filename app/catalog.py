@@ -1,3 +1,4 @@
+import sys
 import uuid
 def get_products():
 	fake_response = [{
@@ -25,4 +26,4 @@ def get_products():
 
 def create_product(sku, title, long_description, price_euro):
 	''' Insertar todo esto en una bbdd '''
-	print(f"Crear sku={sku} y title={title}")
+	print(f"Crear sku={sku} y title={title}", file=sys.stderr)
