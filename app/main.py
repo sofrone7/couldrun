@@ -1,5 +1,6 @@
 from flask import jsonify, request, Flask
 from catalog import get_products, create_product
+import os
 
 app = Flask(__name__)
 
