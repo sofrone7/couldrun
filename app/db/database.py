@@ -12,8 +12,8 @@ def get_db():
     if 'db' not in g and db_connection_name:
         # If there is a db_connection_name then we assume that we are
         # connecting to a unix socket, whose name is google-specific.
-        #unix_socket = '/cloudsql/{}'.format(db_connection_name)
-        unix_socket = '/pei2/20-12-2021/myapp2/{}'.format(db_connection_name)
+        unix_socket = '/cloudsql/{}'.format(db_connection_name)
+        #unix_socket = '/pei2/20-12-2021/myapp2/{}'.format(db_connection_name)
 		g.db = psycopg2.connect(
             user=db_user,
             password=db_password,
